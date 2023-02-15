@@ -1,3 +1,26 @@
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "MPS HUB Key System", HidePremium = false, SaveConfig = true, IntroText = "MPS Key System"})
+
+OrionLib:MakeNotification({
+    Name = "Logged in",
+    Content = "Welcome! "..Player.Name.."." ,
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+_G.Key = "LXXMXXTXXD-KXXEXXYXX" -- Change key here
+_G.KeyInput = "string" -- Change what you want the textbox of where you enter the key to say without clicking it
+
+local Key = Window:MakeTab({
+    Name = "Key System",
+    Icon = "rbxassetid://4483345998", -- Your able to change this to any image you want
+    PremiumOnly = false
+})
+
+function MakeScriptHub()
+
 ---key with webhook
 ---also made by me
 
@@ -57,27 +80,7 @@ request({
 
 wait(1)
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Player = game.Players.LocalPlayer
-local Window = OrionLib:MakeWindow({Name = "MPS HUB Key System", HidePremium = false, SaveConfig = true, IntroText = "MPS Key System"})
 
-OrionLib:MakeNotification({
-    Name = "Logged in",
-    Content = "Welcome! "..Player.Name.."." ,
-    Image = "rbxassetid://4483345998",
-    Time = 5
-})
-
-_G.Key = "LXXMXXTXXD-KXXEXXYXX" -- Change key here
-_G.KeyInput = "string" -- Change what you want the textbox of where you enter the key to say without clicking it
-
-local Key = Window:MakeTab({
-    Name = "Key System",
-    Icon = "rbxassetid://4483345998", -- Your able to change this to any image you want
-    PremiumOnly = false
-})
-
-function MakeScriptHub()
 local lc = game:GetService("Players").LocalPlayer -- Use GetService it is important because some games change Players so use that instead of game.Players!
 local group = 16807529 -- Roblox Fan Group but put your group ID HERE
 local grouplink = "https://www.roblox.com/groups/16807529/Scripts-Clothing-Server#!/about"
