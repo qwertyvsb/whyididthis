@@ -10,7 +10,7 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
-_G.Key = "LXXMXXTXXD-KXXEXXYXX" -- Change key here
+_G.Key = "iWE518cDIDIV-QOgB9fiy5uJr-C8Vu6aWZ7LFE" -- Change key here
 _G.KeyInput = "string" -- Change what you want the textbox of where you enter the key to say without clicking it
 
 local Key = Window:MakeTab({
