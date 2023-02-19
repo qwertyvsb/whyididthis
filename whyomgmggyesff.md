@@ -146,28 +146,7 @@ local Section = Tab:NewSection("Made By KEREM42DNMZ , TeoxTR And Russian")
 --------------------------------------------------------------
 
 
-local Tab = Window:NewTab("Anti Cheat")
-local Section = Tab:NewSection("MPS 4-A-SIDE Legacy")
-Section:NewButton("Bypass", "ButtonInfo", function()
-    print("Clicked")
 
-game:GetService"RunService".RenderStepped:Connect(function()
-game:GetService("Players").LocalPlayer.Backpack.Pass.G:Destroy()
-end)
-
-local OldNamecall
-OldNamecall = hookmetamethod(game, "__namecall", function(self, ...)
-        local args = {...}
-        local method = getnamecallmethod()
-
-        if tostring(self) == "remote1" and method == "FireServer" then
-            args[1] = wait(9e9)
-            return self.FireServer(self, unpack(args))
-end
-return OldNamecall(self, ...)
-end)
-
-end)
 ---------------------------------------------------------------------------
 
 local Tab = Window:NewTab("Mps Scripts")
