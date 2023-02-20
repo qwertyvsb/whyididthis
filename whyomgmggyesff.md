@@ -4666,10 +4666,6 @@ game.Players.LocalPlayer.Character["Left Arm"].Transparency = 0
 end)
 ------------
 
-
-
-------------
-
 local Tab = Window:NewTab("Toggle")
 local Section = Tab:NewSection("TOGGLE")
 
@@ -4678,6 +4674,86 @@ Section:NewKeybind("To Hide GUI", "Hide GUI", Enum.KeyCode.P, function()
 end)
 
 wait(0.1)
+
+-- test --
+
+local StarterGui = game:GetService("StarterGui")
+                             StarterGui:SetCore("ChatMakeSystemMessage",  { Text = "[RUS]: MPS HUB has been loaded! Press P to hide it.", Color = Color3.fromRGB(0, 100, 188), Font = Enum.Font.Gotham} )
+
+
+local function EVUOS_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	wait(2.5)
+	
+	local ts = game:GetService("TweenService")
+	
+	local ti = TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+	local tIn = {Position = UDim2.new(0.819, 0,0.815, 0)}
+	
+	local createIn = ts:Create(script.Parent, ti, tIn)
+	
+	createIn:Play()
+	
+	
+	
+	script.Parent.MouseEnter:Connect(function()
+		local info1 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut, 0, false, 0)
+	
+		local tween1 = ts:Create(script.Parent, info1, {TextTransparency = 0})
+	
+		tween1:Play()
+	
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		local info2 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut, 0, false, 0)
+	
+		local tween2 = ts:Create(script.Parent, info2, {TextTransparency = 0.5})
+	
+		tween2:Play()
+	
+	end)
+end
+coroutine.wrap(EVUOS_fake_script)()
+local function JBMHO_fake_script()
+	local script = Instance.new('LocalScript', TextLabel_2)
+
+	wait(2.5)
+	
+	local ts = game:GetService("TweenService")
+	
+	local ti = TweenInfo.new(1.3, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+	local tIn = {Position = UDim2.new(0.81, 0,0.899, 0)}
+	
+	local createIn = ts:Create(script.Parent, ti, tIn)
+	
+	createIn:Play()
+	
+	
+	
+	
+	script.Parent.MouseEnter:Connect(function()
+		local info1 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut, 0, false, 0)
+	
+		local tween1 = ts:Create(script.Parent, info1, {TextTransparency = 0})
+	
+		tween1:Play()
+	
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		local info2 = TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut, 0, false, 0)
+	
+		local tween2 = ts:Create(script.Parent, info2, {TextTransparency = 0.5})
+	
+		tween2:Play()
+	
+	end)
+end
+coroutine.wrap(JBMHO_fake_script)()
+
+-- test --
 game.StarterGui:SetCore("SendNotification", {
 Title = "MPS FUCKER LOADED"; -- the title (ofc)
 Text = "ez,  made by rus,lt"; -- what the text says (ofc)
