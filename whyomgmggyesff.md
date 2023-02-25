@@ -1867,6 +1867,254 @@ setsimulationradius(math.huge, math.huge)
 
 end)
 
+--
+
+
+local Section = Tab:NewSection("MPS Match Pitch Blatant")
+Section:NewButton("Enable", "ButtonInfo", function()
+    print("Clicked")
+_G.BallName = "MPS"
+_G.Magnitude = 50
+_G.Enabled = true
+
+
+-- DONT TOUCH ANYTHING BELOW THIS
+
+_G.Path = nil
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+local leg = game.Players.LocalPlayer.Character["Right Leg"]
+local left = game.Players.LocalPlayer.Character["Left Arm"]
+local arm = game.Players.LocalPlayer.Character["Right Arm"]
+local torso = game.Players.LocalPlayer.Character.Torso
+local head = game.Players.LocalPlayer.Character.Head
+
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+mouse.KeyDown:connect(function()
+                             if _G.Path == nil then
+    if _G.Enabled == true then
+for i, balls in pairs(game.Workspace:GetDescendants()) do
+                        if balls.Name == _G.BallName then
+                                _G.Path = balls.Parent
+                        if (balls.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(arm, balls, 0)
+firetouchinterest(torso, balls, 0)
+firetouchinterest(left, balls, 0)
+firetouchinterest(leg, balls, 0)
+firetouchinterest(head, balls, 0)
+wait()
+firetouchinterest(arm, balls, 1)
+firetouchinterest(torso, balls, 1)
+firetouchinterest(left, balls, 1)
+firetouchinterest(leg, balls, 1)
+firetouchinterest(head, balls, 1)
+end
+end
+end
+end
+elseif _G.Path ~= nil then
+        if _G.Enabled == true then
+    for i, balls2 in pairs(_G.Path:GetChildren()) do
+                          if balls2.Name == _G.BallName then
+                                              if (balls2.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(arm, balls2, 0)
+firetouchinterest(torso, balls2, 0)
+firetouchinterest(left, balls2, 0)
+firetouchinterest(leg, balls2, 0)
+firetouchinterest(head, balls2, 0)
+wait()
+firetouchinterest(arm, balls2, 1)
+firetouchinterest(torso, balls2, 1)
+firetouchinterest(left, balls2, 1)
+firetouchinterest(leg, balls2, 1)
+firetouchinterest(head, balls2, 1)
+               end
+            end
+        end
+        end
+end
+end)
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+            mouse.Button1Down:Connect(function()
+                             if _G.Path == nil then
+    if _G.Enabled == true then
+for i, balls in pairs(game.Workspace:GetDescendants()) do
+                        if balls.Name == _G.BallName then
+                                _G.Path = balls.Parent
+                        if (balls.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(arm, balls, 0)
+firetouchinterest(torso, balls, 0)
+firetouchinterest(left, balls, 0)
+firetouchinterest(leg, balls, 0)
+firetouchinterest(head, balls, 0)
+wait()
+firetouchinterest(arm, balls, 1)
+firetouchinterest(torso, balls, 1)
+firetouchinterest(left, balls, 1)
+firetouchinterest(leg, balls, 1)
+firetouchinterest(head, balls, 1)
+end
+end
+end
+end
+elseif _G.Path ~= nil then
+        if _G.Enabled == true then
+    for i, balls2 in pairs(_G.Path:GetChildren()) do
+                          if balls2.Name == _G.BallName then
+                                              if (balls2.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(arm, balls2, 0)
+firetouchinterest(torso, balls2, 0)
+firetouchinterest(left, balls2, 0)
+firetouchinterest(leg, balls2, 0)
+firetouchinterest(head, balls2, 0)
+wait()
+firetouchinterest(arm, balls2, 1)
+firetouchinterest(torso, balls2, 1)
+firetouchinterest(left, balls2, 1)
+firetouchinterest(leg, balls2, 1)
+firetouchinterest(head, balls2, 1)
+               end
+            end
+        end
+        end
+end
+end)
+
+
+setsimulationradius(math.huge, math.huge)
+
+end)
+
+----------
+
+------------------------------------------------------------------------
+
+Section:NewButton("Disable", "ButtonInfo", function()
+_G.BallName = "MPS"
+_G.Magnitude = 0
+_G.Enabled = true
+
+
+-- DONT TOUCH ANYTHING BELOW THIS
+
+_G.Path = nil
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+local leg = game.Players.LocalPlayer.Character["Right Leg"]
+local left = game.Players.LocalPlayer.Character["Left Arm"]
+local arm = game.Players.LocalPlayer.Character["Right Arm"]
+local torso = game.Players.LocalPlayer.Character.Torso
+local head = game.Players.LocalPlayer.Character.Head
+
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+mouse.KeyDown:connect(function()
+                             if _G.Path == nil then
+    if _G.Enabled == true then
+for i, balls in pairs(game.Workspace:GetDescendants()) do
+                        if balls.Name == _G.BallName then
+                                _G.Path = balls.Parent
+                        if (balls.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(arm, balls, 0)
+firetouchinterest(torso, balls, 0)
+firetouchinterest(left, balls, 0)
+firetouchinterest(leg, balls, 0)
+firetouchinterest(head, balls, 0)
+wait()
+firetouchinterest(arm, balls, 1)
+firetouchinterest(torso, balls, 1)
+firetouchinterest(left, balls, 1)
+firetouchinterest(leg, balls, 1)
+firetouchinterest(head, balls, 1)
+end
+end
+end
+end
+elseif _G.Path ~= nil then
+        if _G.Enabled == true then
+    for i, balls2 in pairs(_G.Path:GetChildren()) do
+                          if balls2.Name == _G.BallName then
+                                              if (balls2.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(arm, balls2, 0)
+firetouchinterest(torso, balls2, 0)
+firetouchinterest(left, balls2, 0)
+firetouchinterest(leg, balls2, 0)
+firetouchinterest(head, balls2, 0)
+wait()
+firetouchinterest(arm, balls2, 1)
+firetouchinterest(torso, balls2, 1)
+firetouchinterest(left, balls2, 1)
+firetouchinterest(leg, balls2, 1)
+firetouchinterest(head, balls2, 1)
+               end
+            end
+        end
+        end
+end
+end)
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+            mouse.Button1Down:Connect(function()
+                             if _G.Path == nil then
+    if _G.Enabled == true then
+for i, balls in pairs(game.Workspace:GetDescendants()) do
+                        if balls.Name == _G.BallName then
+                                _G.Path = balls.Parent
+                        if (balls.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(arm, balls, 0)
+firetouchinterest(torso, balls, 0)
+firetouchinterest(left, balls, 0)
+firetouchinterest(leg, balls, 0)
+firetouchinterest(head, balls, 0)
+wait()
+firetouchinterest(arm, balls, 1)
+firetouchinterest(torso, balls, 1)
+firetouchinterest(left, balls, 1)
+firetouchinterest(leg, balls, 1)
+firetouchinterest(head, balls, 1)
+end
+end
+end
+end
+elseif _G.Path ~= nil then
+        if _G.Enabled == true then
+    for i, balls2 in pairs(_G.Path:GetChildren()) do
+                          if balls2.Name == _G.BallName then
+                                              if (balls2.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(arm, balls2, 0)
+firetouchinterest(torso, balls2, 0)
+firetouchinterest(left, balls2, 0)
+firetouchinterest(leg, balls2, 0)
+firetouchinterest(head, balls2, 0)
+wait()
+firetouchinterest(arm, balls2, 1)
+firetouchinterest(torso, balls2, 1)
+firetouchinterest(left, balls2, 1)
+firetouchinterest(leg, balls2, 1)
+firetouchinterest(head, balls2, 1)
+               end
+            end
+        end
+        end
+end
+end)
+
+
+setsimulationradius(math.huge, math.huge)
+
+end)
+
+
 
 
 --------------------
