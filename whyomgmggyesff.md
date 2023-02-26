@@ -821,7 +821,7 @@ end)
 ---------------------------------------------------------------
 
 local Tab = Window:NewTab("Leagues")
-local Section = Tab:NewSection("PSML/UFA")
+local Section = Tab:NewSection("PSML/UFA/LBA")
 Section:NewButton("Enable", "ButtonInfo", function()
     print("Clicked")
 -- h
@@ -830,6 +830,163 @@ local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 
 _G.Magnitude = 10
+_G.Enabled = true -- Set this to false if you want to disable the script
+
+local leg = game.Players.LocalPlayer.Character["Right Leg"]
+local leg2 = game.Players.LocalPlayer.Character["Left Leg"]
+local LArm = game.Players.LocalPlayer.Character["Left Arm"]
+local arm = game.Players.LocalPlayer.Character["Right Arm"]
+local torso = game.Players.LocalPlayer.Character.Torso
+local head = game.Players.LocalPlayer.Character.Head
+
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+mouse.KeyDown:connect(function()
+    if _G.Enabled == true then
+for i, balls in pairs(game.Workspace:GetChildren()) do
+                            if balls:IsA("BasePart") or balls:IsA("Part") then
+                                if balls.Size == Vector3.new(2.5,2.5,2.5) then
+                            local ball = balls
+                             if (ball.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(ball, leg, 0)
+firetouchinterest(ball, leg2, 0)
+firetouchinterest(ball, torso,  0)
+firetouchinterest(ball, head, 0)
+firetouchinterest(ball, arm, 0)
+wait()
+firetouchinterest(ball, leg, 1)
+firetouchinterest(ball, leg2, 1)
+firetouchinterest(ball, torso,  1)
+firetouchinterest(ball, head, 1)
+firetouchinterest(ball, arm, 1)
+end
+end
+end
+end
+end
+end)
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+            mouse.Button1Down:Connect(function()
+if _G.Enabled == true then
+for i, balls in pairs(game.Workspace:GetChildren()) do
+                            if balls:IsA("BasePart") or balls:IsA("Part") then
+                                if balls.Size == Vector3.new(2.5,2.5,2.5) then
+                            local ball = balls
+                             if (ball.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(ball, leg, 0)
+firetouchinterest(ball, leg2, 0)
+firetouchinterest(ball, torso,  0)
+firetouchinterest(ball, head, 0)
+firetouchinterest(ball, arm, 0)
+wait()
+firetouchinterest(ball, leg, 1)
+firetouchinterest(ball, leg2, 1)
+firetouchinterest(ball, torso,  1)
+firetouchinterest(ball, head, 1)
+firetouchinterest(ball, arm, 1)
+end
+end
+end
+end
+end
+end)
+
+setsimulationradius(math.huge, math.huge)
+
+end)
+------------------
+
+
+Section:NewButton("Disable", "ButtonInfo", function()
+    print("Clicked")
+-- h
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+_G.Magnitude = 0
+_G.Enabled = true -- Set this to false if you want to disable the script
+
+local leg = game.Players.LocalPlayer.Character["Right Leg"]
+local leg2 = game.Players.LocalPlayer.Character["Left Leg"]
+local LArm = game.Players.LocalPlayer.Character["Left Arm"]
+local arm = game.Players.LocalPlayer.Character["Right Arm"]
+local torso = game.Players.LocalPlayer.Character.Torso
+local head = game.Players.LocalPlayer.Character.Head
+
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+mouse.KeyDown:connect(function()
+    if _G.Enabled == true then
+for i, balls in pairs(game.Workspace:GetChildren()) do
+                            if balls:IsA("BasePart") or balls:IsA("Part") then
+                                if balls.Size == Vector3.new(2.5,2.5,2.5) then
+                            local ball = balls
+                             if (ball.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(ball, leg, 0)
+firetouchinterest(ball, leg2, 0)
+firetouchinterest(ball, torso,  0)
+firetouchinterest(ball, head, 0)
+firetouchinterest(ball, arm, 0)
+wait()
+firetouchinterest(ball, leg, 1)
+firetouchinterest(ball, leg2, 1)
+firetouchinterest(ball, torso,  1)
+firetouchinterest(ball, head, 1)
+firetouchinterest(ball, arm, 1)
+end
+end
+end
+end
+end
+end)
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+            mouse.Button1Down:Connect(function()
+if _G.Enabled == true then
+for i, balls in pairs(game.Workspace:GetChildren()) do
+                            if balls:IsA("BasePart") or balls:IsA("Part") then
+                                if balls.Size == Vector3.new(2.5,2.5,2.5) then
+                            local ball = balls
+                             if (ball.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= _G.Magnitude then
+firetouchinterest(ball, leg, 0)
+firetouchinterest(ball, leg2, 0)
+firetouchinterest(ball, torso,  0)
+firetouchinterest(ball, head, 0)
+firetouchinterest(ball, arm, 0)
+wait()
+firetouchinterest(ball, leg, 1)
+firetouchinterest(ball, leg2, 1)
+firetouchinterest(ball, torso,  1)
+firetouchinterest(ball, head, 1)
+firetouchinterest(ball, arm, 1)
+end
+end
+end
+end
+end
+end)
+
+setsimulationradius(math.huge, math.huge)
+
+end)
+
+--blatant thing smt
+
+local Section = Tab:NewSection("PSML/UFA/LBA Blatant")
+Section:NewButton("Enable", "ButtonInfo", function()
+    print("Clicked")
+-- h
+
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+_G.Magnitude = 70
 _G.Enabled = true -- Set this to false if you want to disable the script
 
 local leg = game.Players.LocalPlayer.Character["Right Leg"]
