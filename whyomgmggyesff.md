@@ -132,8 +132,8 @@ wait(1)
 
 
 local lc = game:GetService("Players").LocalPlayer -- Use GetService it is important because some games change Players so use that instead of game.Players!
-local group = 16807529 -- Roblox Fan Group but put your group ID HERE
-local grouplink = "https://www.roblox.com/groups/16807529/Scripts-Clothing-Server#!/about"
+local group = 17114207 -- Roblox Fan Group but put your group ID HERE
+local grouplink = "https://www.roblox.com/groups/17114207/Lykia-Luxury#!/about"
 
 if lc:IsInGroup(group) then -- IS In group is the roblox API Reference pretty self explanatory 
 
