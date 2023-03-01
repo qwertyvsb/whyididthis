@@ -1,26 +1,4 @@
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Player = game.Players.LocalPlayer
-local Window = OrionLib:MakeWindow({Name = "MPS HUB Key System", HidePremium = false, SaveConfig = true, IntroText = "MPS Key System"})
-
-OrionLib:MakeNotification({
-    Name = "Logged in",
-    Content = "Welcome! "..Player.Name.."." ,
-    Image = "rbxassetid://4483345998",
-    Time = 5
-})
-
-_G.Key = "8197281FFcBE-023f1Bk2k1fYY-5571G1GMANX1D44" -- Change key here
-_G.KeyInput = "string" -- Change what you want the textbox of where you enter the key to say without clicking it
-
-local Key = Window:MakeTab({
-    Name = "Key System",
-    Icon = "rbxassetid://4483345998", -- Your able to change this to any image you want
-    PremiumOnly = false
-})
-
-function MakeScriptHub()
-
 
 local lc = game:GetService("Players").LocalPlayer -- Use GetService it is important because some games change Players so use that instead of game.Players!
 local group = 17114207 -- Roblox Fan Group but put your group ID HERE
@@ -5060,26 +5038,3 @@ else
       lc:kick("Not In Group,Copied Link,Paste It On Your Browser") -- Doesn't have to be kicked
       setclipboard(grouplink)
 end
-OrionLib:Destroy() -- keep this its needed
-end
-
-
-Key:AddTextbox({
-    Name = "Enter Key",
-    Default = "",
-    TextDisappear = true,
-    Callback = function(Value)
-        _G.KeyInput = Value
-    end      
-})
-
-
-Key:AddButton({
-    Name = "Check Key",
-    Callback = function()
-              if _G.KeyInput == _G.Key then
-                MakeScriptHub()
-print("Loaded")
-            end
-      end    
-})
